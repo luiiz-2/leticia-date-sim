@@ -1,4 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 360">
-  <defs><linearGradient id="g" x1="0" x2="1" y1="1" y2="0"><stop stop-color="#ffb4c9"/><stop offset="1" stop-color="#ffd9a8"/></linearGradient></defs>
-  <rect width="500" height="360" rx="36" fill="url(#g)"/><circle cx="103" cy="86" r="46" fill="#fff3bd" opacity=".9"/><path d="M0 278c72-42 136 5 207-33 70-38 126 20 190-16 42-24 70-16 103 1v130H0Z" fill="#ff799c" opacity=".5"/><path d="m253 117 14 29 32 5-23 22 5 31-28-15-28 15 5-31-23-22 32-5Z" fill="#fff" opacity=".9"/><text x="250" y="320" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" fill="#fff">memória #2</text>
-</svg>

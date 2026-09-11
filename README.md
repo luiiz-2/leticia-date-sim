@@ -4,9 +4,9 @@ Um quiz íntimo e divertido feito com Vue 3 + Vite.
 
 ## Personalização rápida
 
-Edite `src/data/quiz.ts` para trocar as 10 perguntas, alternativas e respostas corretas. O campo `correctIndex` começa em `0` para a primeira alternativa, `1` para a segunda e assim por diante.
+Edite `src/data/quiz.ts` para trocar as 8 perguntas, alternativas e respostas corretas. O campo `correctIndex` começa em `0` para a primeira alternativa, `1` para a segunda e assim por diante.
 
-Troque as ilustrações em `src/assets/memory-1.svg`, `memory-2.svg` e `memory-3.svg` pelas fotos de vocês. Para manter o layout, preserve os nomes dos arquivos ou atualize os imports em `src/App.vue`.
+As fotos personalizadas ficam em `src/assets/`: `memory-dog.jpg`, `memory-us.jpeg` e `memory-cat.jpeg`. Para trocar alguma delas, preserve os nomes dos arquivos ou atualize os imports em `src/App.vue`.
 
 ## Desenvolvimento local
 

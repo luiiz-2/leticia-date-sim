@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import memoryOne from './assets/memory-1.svg'
-import memoryTwo from './assets/memory-2.svg'
-import memoryThree from './assets/memory-3.svg'
-import { isExampleContent, quizQuestions } from './data/quiz'
+import memoryDog from './assets/memory-dog.jpg'
+import memoryUs from './assets/memory-us.jpeg'
+import memoryCat from './assets/memory-cat.jpeg'
+import { quizQuestions } from './data/quiz'
 import type { QuizScreen } from './types/quiz'
 
 const screen = ref<QuizScreen>('intro')
@@ -11,7 +11,11 @@ const currentQuestion = ref(0)
 const selectedOption = ref<number | null>(null)
 const correctAnswers = ref(0)
 
-const photos = [memoryOne, memoryTwo, memoryThree]
+const memories = [
+  { src: memoryDog, alt: 'Cachorro usando óculos', label: 'o doguinho' },
+  { src: memoryUs, alt: 'Uma foto nossa juntos', label: 'a nossa foto' },
+  { src: memoryCat, alt: 'Gatinho segurando um coração', label: 'o gatinho' },
+]
 const totalQuestions = quizQuestions.length
 const passingScore = Math.ceil(totalQuestions * 0.6)
 const question = computed(() => quizQuestions[currentQuestion.value])
@@ -76,17 +80,15 @@ function backToIntro() {
           <h1>Quanto você conhece<br /><em>a nossa história?</em></h1>
           <p class="intro-copy">Preparei uma brincadeira rápida com algumas das minhas memórias favoritas. Responda com o coração. 💌</p>
 
-          <div class="memory-strip" aria-label="Ilustrações das nossas memórias">
-            <figure v-for="(photo, index) in photos" :key="photo" class="memory-photo" :class="`memory-${index + 1}`">
-              <img :src="photo" :alt="`Ilustração de memória ${index + 1}`" />
+          <div class="memory-strip" aria-label="Nossas memórias">
+            <figure v-for="(memory, index) in memories" :key="memory.src" class="memory-photo" :class="`memory-${index + 1}`">
+              <img :src="memory.src" :alt="memory.alt" />
+              <figcaption>{{ memory.label }}</figcaption>
             </figure>
           </div>
 
-          <div v-if="isExampleContent" class="example-note">
-            <span>✎</span> As perguntas estão com exemplos — personalize-as em <code>src/data/quiz.ts</code>.
-          </div>
           <button class="primary-button" type="button" @click="startQuiz">começar a brincadeira <span>→</span></button>
-          <p class="tiny-note">10 perguntinhas · uma surpresa no final</p>
+          <p class="tiny-note">8 perguntinhas · uma surpresa no final</p>
         </div>
 
         <div v-else-if="screen === 'quiz'" key="quiz" class="quiz-view">
