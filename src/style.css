@@ -45,7 +45,6 @@ h1 em { color: #7b71bd; font-weight: 600; }
 .memory-strip { display: flex; justify-content: center; gap: 14px; margin: 0 auto 25px; }
 .memory-photo { width: 29%; max-width: 163px; margin: 0; padding: 7px; background: white; box-shadow: 0 10px 25px rgba(78, 105, 143, .14); }
 .memory-photo img { display: block; width: 100%; aspect-ratio: 1.25; object-fit: cover; }
-.memory-photo figcaption { padding: 7px 2px 3px; color: #8495ab; font-size: 11px; font-weight: 700; text-align: center; }
 .memory-1 { transform: rotate(-5deg); }.memory-2 { transform: translateY(9px) rotate(2deg); }.memory-3 { transform: rotate(5deg); }
 .primary-button { display: inline-flex; align-items: center; justify-content: center; gap: 17px; min-height: 50px; padding: 0 25px; color: white; background: #88a8d5; border: 0; border-radius: 999px; box-shadow: 0 12px 22px rgba(111, 146, 194, .25); cursor: pointer; font-size: 12px; font-weight: 700; letter-spacing: .03em; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
 .primary-button:hover:not(:disabled) { background: #7597ca; box-shadow: 0 15px 27px rgba(111, 146, 194, .32); transform: translateY(-2px); }

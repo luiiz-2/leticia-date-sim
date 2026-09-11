@@ -12,9 +12,9 @@ const selectedOption = ref<number | null>(null)
 const correctAnswers = ref(0)
 
 const memories = [
-  { src: memoryDog, alt: 'Cachorro usando óculos', label: 'o doguinho' },
-  { src: memoryUs, alt: 'Uma foto nossa juntos', label: 'a nossa foto' },
-  { src: memoryCat, alt: 'Gatinho segurando um coração', label: 'o gatinho' },
+  { src: memoryDog, alt: 'Cachorro usando óculos' },
+  { src: memoryUs, alt: 'Uma foto nossa juntos' },
+  { src: memoryCat, alt: 'Gatinho segurando um coração' },
 ]
 const totalQuestions = quizQuestions.length
 const passingScore = Math.ceil(totalQuestions * 0.6)
@@ -70,7 +70,7 @@ function backToIntro() {
         <button v-if="screen !== 'intro'" class="back-button" type="button" aria-label="Voltar para o início" @click="backToIntro">
           ← <span>início</span>
         </button>
-        <span v-else class="topbar-mark">para nós dois <span>✦</span></span>
+        <span v-else class="topbar-mark">quiz secreto <span>✦</span></span>
         <span class="topbar-lock">feito com carinho <span>♡</span></span>
       </header>
 
@@ -78,16 +78,15 @@ function backToIntro() {
         <div v-if="screen === 'intro'" key="intro" class="intro-view">
           <div class="eyebrow"><span>✦</span> um quiz muito especial <span>✦</span></div>
           <h1>Quanto você conhece<br /><em>a nossa história?</em></h1>
-          <p class="intro-copy">Preparei uma brincadeira rápida com algumas das minhas memórias favoritas. Responda com o coração. 💌</p>
+          <p class="intro-copy">Responda com o coração. 💌</p>
 
           <div class="memory-strip" aria-label="Nossas memórias">
             <figure v-for="(memory, index) in memories" :key="memory.src" class="memory-photo" :class="`memory-${index + 1}`">
               <img :src="memory.src" :alt="memory.alt" />
-              <figcaption>{{ memory.label }}</figcaption>
             </figure>
           </div>
 
-          <button class="primary-button" type="button" @click="startQuiz">começar a brincadeira <span>→</span></button>
+          <button class="primary-button" type="button" @click="startQuiz">iniciar quiz <span>→</span></button>
           <p class="tiny-note">8 perguntinhas · uma surpresa no final</p>
         </div>
 
